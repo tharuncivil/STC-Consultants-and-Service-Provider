@@ -7,7 +7,7 @@ export const COMPANY_INFO = {
   hq: "Devarakonda, Nalgonda District, Telangana, India",
   founded: "March 2026",
   email: "stc.consultancy.1@gmail.com",
-  phone: "+91 94943 01065", // Professional Indian placeholder number
+  phone: "+91 9390293472", // Professional Indian placeholder number
   address: "Devarakonda, Nalgonda District, Telangana – 508248",
   linkedin: "https://www.linkedin.com/company/stc-consultants-service-provider"
 };
