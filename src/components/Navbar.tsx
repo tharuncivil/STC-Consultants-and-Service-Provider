@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Building2, MapPin } from "lucide-react";
 import { COMPANY_INFO } from "../data";
-import stcLogoImg from "../assets/images/stc_logo_1784285789153.jpg";
+import stcLogoImg from "../assets/images/STC_Logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
