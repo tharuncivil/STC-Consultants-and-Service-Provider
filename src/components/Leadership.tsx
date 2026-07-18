@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Linkedin, Mail, GraduationCap, Award, MapPin } from "lucide-react";
 import { LEADERSHIP, COMPANY_INFO } from "../data";
-import tarunCeoPhoto from "../assets/images/tarun_ceo_1784285804628.jpg";
+import tarunCeoPhoto from "../assets/images/Tarun.jpeg";
 
 export default function Leadership() {
   const md = LEADERSHIP.md;
