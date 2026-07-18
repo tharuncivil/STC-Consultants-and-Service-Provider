@@ -86,7 +86,7 @@ export default function Navbar() {
                 src={stcLogoImg} 
                 alt="STC Logo" 
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover rounded-lg"
               />
             </div>
             <div className="flex flex-col">
