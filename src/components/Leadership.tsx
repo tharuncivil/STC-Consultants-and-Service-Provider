@@ -1,10 +1,23 @@
-import { motion } from "motion/react";
-import { Linkedin, Mail, GraduationCap, Award, MapPin } from "lucide-react";
+import {
+  Linkedin,
+  Mail,
+  Award,
+  MapPin,
+  BriefcaseBusiness,
+  Building2,
+  GraduationCap,
+  CheckCircle2
+} from "lucide-react";
+
 import { LEADERSHIP, COMPANY_INFO } from "../data";
+
 import tarunCeoPhoto from "../assets/images/Tarun.jpeg";
+import ajinkyaPhoto from "../assets/images/Ajinkya_Rodge.jpeg";
 
 export default function Leadership() {
   const md = LEADERSHIP.md;
+  const urbanPlanningExpert = LEADERSHIP.urbanPlanningExpert;
+  const institutionalExpert = LEADERSHIP.institutionalExpert;
   const coreTeam = LEADERSHIP.coreTeam;
 
   return (
@@ -119,6 +132,198 @@ export default function Leadership() {
 
 
         
+        {/* Urban Planning Expert — Mumbai Metropolitan Region */}
+        <div className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch"
+          >
+            {/* Expert Photo */}
+            <div className="lg:col-span-4 relative min-h-[360px] bg-navy-900 flex flex-col justify-center items-center p-8 text-center">
+              <div
+                className="absolute inset-0 opacity-10 pointer-events-none"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(var(--color-slate-100) 1px, transparent 1px)",
+                  backgroundSize: "16px 16px"
+                }}
+              />
+
+              <div className="relative w-56 h-64 rounded-2xl border-4 border-gold-400/40 overflow-hidden shadow-xl bg-navy-950 group">
+                <img
+                  src={ajinkyaPhoto}
+                  alt={urbanPlanningExpert.name}
+                  referrerPolicy="no-referrer"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+
+              <div className="relative z-10 mt-6">
+                <h3 className="font-display font-extrabold text-2xl text-white tracking-tight">
+                  {urbanPlanningExpert.name}
+                </h3>
+
+                <p className="text-sm font-mono font-bold text-gold-400 uppercase tracking-widest mt-1.5">
+                  {urbanPlanningExpert.role}
+                </p>
+
+                <p className="text-xs text-slate-400 font-sans mt-2">
+                  {urbanPlanningExpert.designation}
+                </p>
+              </div>
+            </div>
+
+            {/* Expert Biography */}
+            <div className="lg:col-span-8 p-8 sm:p-12 flex flex-col justify-center bg-white">
+              <div className="flex items-center gap-2 mb-5">
+                <BriefcaseBusiness className="h-5 w-5 text-gold-500" />
+                <span className="text-xs font-mono font-extrabold tracking-widest text-slate-500 uppercase">
+                  Regional Planning Expertise
+                </span>
+              </div>
+
+              <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-navy-900 tracking-tight">
+                Urban Planning Expert — Mumbai Metropolitan Region
+              </h3>
+
+              <div className="flex flex-wrap gap-3 mt-5">
+                <span className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-gold-50 border border-gold-200 text-gold-700 text-xs font-mono font-bold">
+                  <BriefcaseBusiness className="h-3.5 w-3.5" />
+                  {urbanPlanningExpert.experience}
+                </span>
+
+                <span className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-bold">
+                  <Building2 className="h-3.5 w-3.5" />
+                  Key Partner
+                </span>
+              </div>
+
+              <p className="mt-6 text-slate-700 font-sans text-sm sm:text-base leading-relaxed">
+                {urbanPlanningExpert.bio}
+              </p>
+
+              <div className="pt-6 mt-6 border-t border-slate-100">
+                <span className="text-xs font-mono font-extrabold tracking-widest text-slate-400 uppercase">
+                  Core Areas of Expertise
+                </span>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                  {urbanPlanningExpert.expertise.map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-2 text-sm text-slate-700 font-sans"
+                    >
+                      <CheckCircle2 className="h-4 w-4 text-gold-500 shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-5 mt-6 border-t border-slate-100 flex items-center gap-2 text-xs font-mono text-slate-400">
+                <MapPin className="h-3.5 w-3.5 text-gold-500" />
+                <span className="font-bold text-navy-900">
+                  Mumbai Metropolitan Region
+                </span>
+                <span>•</span>
+                <span>STC Key Partner</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Institutional Expert */}
+        <div className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch"
+          >
+            {/* Institutional Identity Panel */}
+            <div className="lg:col-span-4 relative min-h-[330px] bg-navy-900 flex flex-col justify-center items-center p-8 text-center">
+              <div
+                className="absolute inset-0 opacity-10 pointer-events-none"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(var(--color-slate-100) 1px, transparent 1px)",
+                  backgroundSize: "16px 16px"
+                }}
+              />
+
+              <div className="relative w-28 h-28 rounded-full border-4 border-gold-400/40 bg-navy-950 flex items-center justify-center shadow-xl">
+                <GraduationCap className="h-14 w-14 text-gold-400" />
+              </div>
+
+              <div className="relative z-10 mt-7">
+                <h3 className="font-display font-extrabold text-2xl text-white tracking-tight">
+                  {institutionalExpert.name}
+                </h3>
+
+                <p className="text-sm font-mono font-bold text-gold-400 uppercase tracking-widest mt-2">
+                  {institutionalExpert.role}
+                </p>
+
+                <p className="text-xs text-slate-400 font-sans mt-2">
+                  {institutionalExpert.designation}
+                </p>
+              </div>
+            </div>
+
+            {/* Institutional Expert Biography */}
+            <div className="lg:col-span-8 p-8 sm:p-12 flex flex-col justify-center bg-white">
+              <div className="flex items-center gap-2 mb-5">
+                <GraduationCap className="h-5 w-5 text-gold-500" />
+                <span className="text-xs font-mono font-extrabold tracking-widest text-slate-500 uppercase">
+                  Institutional Expertise
+                </span>
+              </div>
+
+              <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-navy-900 tracking-tight">
+                Academic & Institutional Planning Expert
+              </h3>
+
+              <p className="mt-6 text-slate-700 font-sans text-sm sm:text-base leading-relaxed">
+                {institutionalExpert.bio}
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-7">
+                <div className="rounded-xl bg-slate-50 border border-slate-200 p-4">
+                  <span className="text-[10px] font-mono font-bold tracking-widest text-slate-400 uppercase">
+                    Institution
+                  </span>
+                  <p className="mt-1 font-display font-bold text-navy-900 text-sm">
+                    SVNIT, Surat
+                  </p>
+                </div>
+
+                <div className="rounded-xl bg-slate-50 border border-slate-200 p-4">
+                  <span className="text-[10px] font-mono font-bold tracking-widest text-slate-400 uppercase">
+                    Academic Role
+                  </span>
+                  <p className="mt-1 font-display font-bold text-navy-900 text-sm">
+                    Professor — Urban Planning
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-5 mt-6 border-t border-slate-100 flex items-center gap-2 text-xs font-mono text-slate-400">
+                <Building2 className="h-3.5 w-3.5 text-gold-500" />
+                <span className="font-bold text-navy-900">
+                  Institutional Expert
+                </span>
+                <span>•</span>
+                <span>Academic & Professional Advisory</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
         {/* Core Team Members Row */}
         <div>
           <div className="text-center mb-10">
