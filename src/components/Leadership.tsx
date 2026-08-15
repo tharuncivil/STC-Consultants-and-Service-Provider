@@ -12,7 +12,7 @@ import {
 import { LEADERSHIP, COMPANY_INFO } from "../data";
 
 import tarunCeoPhoto from "../assets/images/Tarun.jpeg";
-import ajinkyaPhoto from "../assets/images/Ajinkya_Rodge.jpeg";
+import ajinkyaPhoto from "../assets/images/Ajinkya_R.jpg";
 
 export default function Leadership() {
   const md = LEADERSHIP.md;
