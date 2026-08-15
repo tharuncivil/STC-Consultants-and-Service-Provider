@@ -150,7 +150,6 @@ export default function Leadership() {
                   loading="lazy"
                 />
               </div>
-
               <div className="relative z-10 mt-6">
                 <h3 className="font-display font-extrabold text-2xl text-white tracking-tight">
                   {urbanPlanningExpert.name}
