@@ -84,22 +84,14 @@ export const LEADERSHIP = {
     bio: "Sabavath Tarun leads STC Consultants & Service Provider, bringing a combination of statutory planning expertise and technical GIS delivery to every mandate the firm takes on. He holds an M.Tech in Urban Planning from the Sardar Vallabhbhai National Institute of Technology (SVNIT), Surat, and a B.Tech in Civil Engineering.\n\nHis planning background spans GIS-based Existing Land Use mapping and Digital Twin modelling for new town development, Transit-Oriented Development impact assessment and Local Area Planning along metro corridors, statutory Development Plan preparation including public hearing and objection resolution, and Local Area Plan preparation for High-Speed Rail stations involving multi-agency and international development partner coordination. Earlier experience at the Hyderabad Metropolitan Development Authority (HMDA) included riverfront development analysis and Land Use/Land Cover (LULC) mapping using GIS and remote sensing.",
     imagePlaceholder: "alt='MD_CEO_photo_placeholder'"
   },
-
   urbanPlanningExpert: {
     name: "Ajinkya Rodge",
     role: "Urban Planning Expert — Mumbai Metropolitan Region",
     designation: "Key Partner & Regional Planning Expert",
     experience: "7+ Years of Professional Experience",
     bio: "Ajinkya Rodge is an urban planning professional with over seven years of experience in urban and regional planning, with a strong professional focus across the Mumbai Metropolitan Region. As a key player and partner at STC Consultants & Service Provider, he brings practical planning expertise and regional knowledge to support complex urban development, statutory planning, and strategic planning assignments.",
-    expertise: [
-      "Urban & Regional Planning",
-      "Development Planning",
-      "Local Area Planning",
-      "Transit-Oriented Development",
-      "Mumbai Metropolitan Region Planning"
-    ]
+    expertise: ["Urban & Regional Planning", "Development Planning", "Local Area Planning", "Transit-Oriented Development", "Mumbai Metropolitan Region Planning"]
   },
-
   institutionalExpert: {
     name: "Dr. Chetan R. Patel",
     role: "Institutional Expert",
