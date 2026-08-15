@@ -1,4 +1,15 @@
-import { Linkedin, Mail, GraduationCap, Award, MapPin } from "lucide-react";
+import { motion } from "motion/react";
+import {
+  Linkedin,
+  Mail,
+  GraduationCap,
+  Award,
+  MapPin,
+  BriefcaseBusiness,
+  Building2,
+  CheckCircle2
+} from "lucide-react";
+
 import { LEADERSHIP, COMPANY_INFO } from "../data";
 import tarunCeoPhoto from "../assets/images/Tarun.jpeg";
 import ajinkyaPhoto from "../assets/images/Ajinkya_R.jpg";
@@ -10,9 +21,12 @@ export default function Leadership() {
   const coreTeam = LEADERSHIP.coreTeam;
 
   return (
-    <section id="leadership" className="py-24 bg-slate-50 relative overflow-hidden">
+    <section
+      id="leadership"
+      className="py-24 bg-slate-50 relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
@@ -23,6 +37,7 @@ export default function Leadership() {
           >
             Firm Leadership
           </motion.span>
+
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -32,10 +47,15 @@ export default function Leadership() {
           >
             Management & Core Team
           </motion.h2>
+
           <div className="mt-4 h-1 w-16 bg-gold-500 mx-auto rounded-full" />
         </div>
 
-        {/* MD & CEO Featured Card */}
+
+        {/* =========================================================
+            MD & CEO FEATURED CARD
+           ========================================================= */}
+
         <div className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,16 +64,20 @@ export default function Leadership() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch"
           >
+
             {/* Left Photo Column */}
             <div className="lg:col-span-5 relative min-h-[350px] bg-navy-900 flex flex-col justify-center items-center p-8 text-center border-r border-slate-100">
+
               {/* Graphic Blueprint background */}
-              <div className="absolute inset-0 opacity-10 pointer-events-none" 
+              <div
+                className="absolute inset-0 opacity-10 pointer-events-none"
                 style={{
-                  backgroundImage: "radial-gradient(var(--color-slate-100) 1px, transparent 1px)",
+                  backgroundImage:
+                    "radial-gradient(var(--color-slate-100) 1px, transparent 1px)",
                   backgroundSize: "16px 16px"
                 }}
               />
-              
+
               {/* Photo Container */}
               <div className="relative w-48 h-48 rounded-full border-4 border-gold-400/50 overflow-hidden shadow-xl bg-navy-950 flex items-center justify-center group mb-6">
                 <img
@@ -66,9 +90,17 @@ export default function Leadership() {
               </div>
 
               <div className="relative z-10">
-                <h3 className="font-display font-extrabold text-2xl text-white tracking-tight">{md.name}</h3>
-                <p className="text-sm font-mono font-bold text-gold-400 uppercase tracking-widest mt-1.5">{md.role}</p>
-                <p className="text-xs text-slate-400 font-sans mt-1">STC Consultants & Service Provider</p>
+                <h3 className="font-display font-extrabold text-2xl text-white tracking-tight">
+                  {md.name}
+                </h3>
+
+                <p className="text-sm font-mono font-bold text-gold-400 uppercase tracking-widest mt-1.5">
+                  {md.role}
+                </p>
+
+                <p className="text-xs text-slate-400 font-sans mt-1">
+                  STC Consultants & Service Provider
+                </p>
               </div>
 
               {/* CEO Direct Contact Links */}
@@ -82,6 +114,7 @@ export default function Leadership() {
                 >
                   <Linkedin className="h-4.5 w-4.5" />
                 </a>
+
                 <a
                   href={`mailto:${COMPANY_INFO.email}`}
                   className="p-2.5 rounded-full bg-navy-950 hover:bg-gold-500 hover:text-navy-950 border border-navy-800 text-slate-300 transition-all shadow-md cursor-pointer"
@@ -92,13 +125,18 @@ export default function Leadership() {
               </div>
             </div>
 
-            {/* Right Bio Column (Verbatim text) */}
+
+            {/* Right Bio Column */}
             <div className="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center space-y-6 bg-white">
+
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-gold-500" />
-                <span className="text-xs font-mono font-extrabold tracking-widest text-slate-500 uppercase">Executive Biography</span>
+
+                <span className="text-xs font-mono font-extrabold tracking-widest text-slate-500 uppercase">
+                  Executive Biography
+                </span>
               </div>
-              
+
               <div className="prose prose-slate max-w-none text-slate-700 font-sans text-sm sm:text-base leading-relaxed space-y-4">
                 {md.bio.split("\n\n").map((para, i) => (
                   <p key={i}>{para}</p>
@@ -106,22 +144,38 @@ export default function Leadership() {
               </div>
 
               <div className="pt-6 border-t border-slate-100 grid grid-cols-2 gap-4 text-xs font-mono">
+
                 <div>
-                  <span className="text-slate-400 block uppercase">Qualification Edge</span>
-                  <span className="text-navy-900 font-bold font-display mt-0.5 block">M.Tech (Urban Planning)</span>
+                  <span className="text-slate-400 block uppercase">
+                    Qualification Edge
+                  </span>
+
+                  <span className="text-navy-900 font-bold font-display mt-0.5 block">
+                    M.Tech (Urban Planning)
+                  </span>
                 </div>
+
                 <div>
-                  <span className="text-slate-400 block uppercase">Technical Base</span>
-                  <span className="text-navy-900 font-bold font-display mt-0.5 block">B.Tech (Civil Engineering)</span>
+                  <span className="text-slate-400 block uppercase">
+                    Technical Base
+                  </span>
+
+                  <span className="text-navy-900 font-bold font-display mt-0.5 block">
+                    B.Tech (Civil Engineering)
+                  </span>
                 </div>
+
               </div>
             </div>
+
           </motion.div>
         </div>
 
 
-        
-        {/* Urban Planning Expert — Mumbai Metropolitan Region */}
+        {/* =========================================================
+            URBAN PLANNING EXPERT — AJINKYA RODGE
+           ========================================================= */}
+
         <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -130,8 +184,10 @@ export default function Leadership() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch"
           >
+
             {/* Expert Photo */}
             <div className="lg:col-span-4 relative min-h-[360px] bg-navy-900 flex flex-col justify-center items-center p-8 text-center">
+
               <div
                 className="absolute inset-0 opacity-10 pointer-events-none"
                 style={{
@@ -142,6 +198,7 @@ export default function Leadership() {
               />
 
               <div className="relative w-56 h-64 rounded-2xl border-4 border-gold-400/40 overflow-hidden shadow-xl bg-navy-950 group">
+
                 <img
                   src={ajinkyaPhoto}
                   alt={urbanPlanningExpert.name}
@@ -149,8 +206,11 @@ export default function Leadership() {
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
+
               </div>
+
               <div className="relative z-10 mt-6">
+
                 <h3 className="font-display font-extrabold text-2xl text-white tracking-tight">
                   {urbanPlanningExpert.name}
                 </h3>
@@ -162,13 +222,17 @@ export default function Leadership() {
                 <p className="text-xs text-slate-400 font-sans mt-2">
                   {urbanPlanningExpert.designation}
                 </p>
+
               </div>
             </div>
 
+
             {/* Expert Biography */}
             <div className="lg:col-span-8 p-8 sm:p-12 flex flex-col justify-center bg-white">
+
               <div className="flex items-center gap-2 mb-5">
                 <BriefcaseBusiness className="h-5 w-5 text-gold-500" />
+
                 <span className="text-xs font-mono font-extrabold tracking-widest text-slate-500 uppercase">
                   Regional Planning Expertise
                 </span>
@@ -179,6 +243,7 @@ export default function Leadership() {
               </h3>
 
               <div className="flex flex-wrap gap-3 mt-5">
+
                 <span className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-gold-50 border border-gold-200 text-gold-700 text-xs font-mono font-bold">
                   <BriefcaseBusiness className="h-3.5 w-3.5" />
                   {urbanPlanningExpert.experience}
@@ -188,6 +253,7 @@ export default function Leadership() {
                   <Building2 className="h-3.5 w-3.5" />
                   Key Partner
                 </span>
+
               </div>
 
               <p className="mt-6 text-slate-700 font-sans text-sm sm:text-base leading-relaxed">
@@ -195,11 +261,13 @@ export default function Leadership() {
               </p>
 
               <div className="pt-6 mt-6 border-t border-slate-100">
+
                 <span className="text-xs font-mono font-extrabold tracking-widest text-slate-400 uppercase">
                   Core Areas of Expertise
                 </span>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+
                   {urbanPlanningExpert.expertise.map((item) => (
                     <div
                       key={item}
@@ -209,23 +277,36 @@ export default function Leadership() {
                       <span>{item}</span>
                     </div>
                   ))}
+
                 </div>
               </div>
 
               <div className="pt-5 mt-6 border-t border-slate-100 flex items-center gap-2 text-xs font-mono text-slate-400">
+
                 <MapPin className="h-3.5 w-3.5 text-gold-500" />
+
                 <span className="font-bold text-navy-900">
                   Mumbai Metropolitan Region
                 </span>
+
                 <span>•</span>
+
                 <span>STC Key Partner</span>
+
               </div>
+
             </div>
+
           </motion.div>
         </div>
 
-        {/* Institutional Expert */}
+
+        {/* =========================================================
+            INSTITUTIONAL EXPERT — DR. CHETAN R. PATEL
+           ========================================================= */}
+
         <div className="mb-20">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -233,8 +314,10 @@ export default function Leadership() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch"
           >
+
             {/* Institutional Identity Panel */}
             <div className="lg:col-span-4 relative min-h-[330px] bg-navy-900 flex flex-col justify-center items-center p-8 text-center">
+
               <div
                 className="absolute inset-0 opacity-10 pointer-events-none"
                 style={{
@@ -245,10 +328,13 @@ export default function Leadership() {
               />
 
               <div className="relative w-28 h-28 rounded-full border-4 border-gold-400/40 bg-navy-950 flex items-center justify-center shadow-xl">
+
                 <GraduationCap className="h-14 w-14 text-gold-400" />
+
               </div>
 
               <div className="relative z-10 mt-7">
+
                 <h3 className="font-display font-extrabold text-2xl text-white tracking-tight">
                   {institutionalExpert.name}
                 </h3>
@@ -260,16 +346,22 @@ export default function Leadership() {
                 <p className="text-xs text-slate-400 font-sans mt-2">
                   {institutionalExpert.designation}
                 </p>
+
               </div>
             </div>
 
+
             {/* Institutional Expert Biography */}
             <div className="lg:col-span-8 p-8 sm:p-12 flex flex-col justify-center bg-white">
+
               <div className="flex items-center gap-2 mb-5">
+
                 <GraduationCap className="h-5 w-5 text-gold-500" />
+
                 <span className="text-xs font-mono font-extrabold tracking-widest text-slate-500 uppercase">
                   Institutional Expertise
                 </span>
+
               </div>
 
               <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-navy-900 tracking-tight">
@@ -281,71 +373,114 @@ export default function Leadership() {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-7">
+
                 <div className="rounded-xl bg-slate-50 border border-slate-200 p-4">
+
                   <span className="text-[10px] font-mono font-bold tracking-widest text-slate-400 uppercase">
                     Institution
                   </span>
+
                   <p className="mt-1 font-display font-bold text-navy-900 text-sm">
                     SVNIT, Surat
                   </p>
+
                 </div>
 
                 <div className="rounded-xl bg-slate-50 border border-slate-200 p-4">
+
                   <span className="text-[10px] font-mono font-bold tracking-widest text-slate-400 uppercase">
                     Academic Role
                   </span>
+
                   <p className="mt-1 font-display font-bold text-navy-900 text-sm">
                     Professor — Urban Planning
                   </p>
+
                 </div>
+
               </div>
 
               <div className="pt-5 mt-6 border-t border-slate-100 flex items-center gap-2 text-xs font-mono text-slate-400">
+
                 <Building2 className="h-3.5 w-3.5 text-gold-500" />
+
                 <span className="font-bold text-navy-900">
                   Institutional Expert
                 </span>
+
                 <span>•</span>
+
                 <span>Academic & Professional Advisory</span>
+
               </div>
+
             </div>
+
           </motion.div>
         </div>
 
-        {/* Core Team Members Row */}
+
+        {/* =========================================================
+            EXISTING TECHNICAL ADVISORY CORE
+           ========================================================= */}
+
         <div>
+
           <div className="text-center mb-10">
-            <h3 className="font-display font-extrabold text-navy-900 text-xl tracking-tight">Our Technical Advisory Core</h3>
-            <p className="text-xs text-slate-500 font-sans mt-1">Specialized professionals delivering spatial layouts, valuations, and compliance audits.</p>
+
+            <h3 className="font-display font-extrabold text-navy-900 text-xl tracking-tight">
+              Our Technical Advisory Core
+            </h3>
+
+            <p className="text-xs text-slate-500 font-sans mt-1">
+              Specialized professionals delivering spatial layouts, valuations, and compliance audits.
+            </p>
+
           </div>
 
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
             {coreTeam.map((member, index) => (
+
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1
+                }}
                 className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:border-gold-400/50 hover:shadow-lg hover:shadow-slate-100 transition-all duration-300 group"
               >
+
                 <div>
+
                   {/* Photo Placeholder Graphic */}
                   <div className="w-16 h-16 rounded-xl bg-navy-50 text-navy-800 border border-slate-100 mb-5 flex items-center justify-center shadow-inner group-hover:scale-105 group-hover:border-gold-500/20 transition-all duration-300 relative overflow-hidden">
-                    <span className="font-mono text-xs font-extrabold text-slate-400 uppercase">Core</span>
-                    {/* Alt-tagged placeholder image for swap */}
+
+                    <span className="font-mono text-xs font-extrabold text-slate-400 uppercase">
+                      Core
+                    </span>
+
                     <img
                       src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1 1'%3E%3Crect width='100%25' height='100%25' fill='%23f1f5f9'/%3E%3C/svg%3E"
-                      alt={member.imagePlaceholder.replace("alt=", "").replace(/'/g, "").replace(/"/g, "")}
+                      alt={member.imagePlaceholder
+                        .replace("alt=", "")
+                        .replace(/'/g, "")
+                        .replace(/"/g, "")}
                       referrerPolicy="no-referrer"
                       className="absolute inset-0 w-full h-full object-cover opacity-0 pointer-events-none"
                       loading="lazy"
                     />
+
                   </div>
 
                   <h4 className="font-display font-bold text-navy-900 text-base tracking-tight leading-tight group-hover:text-gold-600 transition-colors">
                     {member.name}
                   </h4>
+
                   <p className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider mt-1">
                     {member.role}
                   </p>
@@ -353,17 +488,30 @@ export default function Leadership() {
                   <p className="text-xs text-slate-600 font-sans leading-relaxed mt-4">
                     {member.focus}
                   </p>
+
                 </div>
 
+
                 <div className="pt-4 border-t border-slate-100 mt-6 flex justify-between items-center text-[10px] font-mono text-slate-400">
+
                   <span>STATUS:</span>
+
                   <span className="text-navy-900 font-bold flex items-center gap-1 uppercase">
-                    <MapPin className="h-2.5 w-2.5 text-gold-500" /> Active
+
+                    <MapPin className="h-2.5 w-2.5 text-gold-500" />
+
+                    Active
+
                   </span>
+
                 </div>
+
               </motion.div>
+
             ))}
+
           </div>
+
         </div>
 
       </div>
