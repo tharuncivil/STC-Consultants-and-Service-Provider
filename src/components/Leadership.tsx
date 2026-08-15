@@ -1,16 +1,5 @@
-import {
-  Linkedin,
-  Mail,
-  Award,
-  MapPin,
-  BriefcaseBusiness,
-  Building2,
-  GraduationCap,
-  CheckCircle2
-} from "lucide-react";
-
+import { Linkedin, Mail, GraduationCap, Award, MapPin } from "lucide-react";
 import { LEADERSHIP, COMPANY_INFO } from "../data";
-
 import tarunCeoPhoto from "../assets/images/Tarun.jpeg";
 import ajinkyaPhoto from "../assets/images/Ajinkya_R.jpg";
 
